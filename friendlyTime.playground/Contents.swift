@@ -22,7 +22,7 @@ func friendlyTime(dateTimeString: String) -> String {
     }
     
     let delta = newDate.timeIntervalSince(date)
-//    print("时间相差：\(delta)")
+    //    print("时间相差：\(delta)")
     if delta <= 0 {
         showTimeString = "刚刚"
     }else if (delta < 60) {
@@ -31,7 +31,7 @@ func friendlyTime(dateTimeString: String) -> String {
         showTimeString = "\(Int(delta/60))分钟前"
     }else{
         let calender = Calendar.current
-//        print(calender.description)
+        //        print(calender.description)
         let comonsents: Set<Calendar.Component> = [.year, .month, .day, .hour, .minute]
         
         let dateComponents = calender.dateComponents(comonsents, from: newDate)
@@ -45,7 +45,7 @@ func friendlyTime(dateTimeString: String) -> String {
             let day = dateComponents1.day,
             let hour = dateComponents1.hour,
             let minute = dateComponents1.minute else {
-            return showTimeString
+                return showTimeString
         }
         
         let yearString = "\(year)"
@@ -53,7 +53,7 @@ func friendlyTime(dateTimeString: String) -> String {
         let dayString = getTimeString(day)
         let hourString = getTimeString(hour)
         let minuteString = getTimeString(minute)
-
+        
         if currentYear == year { // 相同年
             if currentMonth != month {
                 showTimeString =  "\(monthString)月\(dayString)日"
