@@ -8,13 +8,14 @@
 
 #import "ViewController.h"
 #import "Person.h"
+#import "WeakProxy.h"
 
 @interface ViewController ()
 {
     Person *_person;
 }
 @property (weak, nonatomic) IBOutlet UILabel *msgLabel;
-
+@property (nonatomic, strong) NSTimer *timer;
 @end
 
 @implementation ViewController
@@ -25,6 +26,12 @@
     
     _person = [[Person alloc] initWithName:@"张三" age:23];
     __weak typeof(self)weakSelf = self;
+    
+    // 类方法就不用
+    [UIView animateWithDuration:1 animations:^{
+        
+    }];
+    
     [_person personAgeChange:^{
         /**
          * 在block中需要多次使用weakself时要转成strongSelf，这样确保在block执行完成之前不被释放掉
@@ -34,6 +41,13 @@
     }];
     
     [self updateContent];
+    
+    // oc
+    _timer = [NSTimer scheduledTimerWithTimeInterval:1 target:[WeakProxy proxyWithTarget:self] selector:@selector(timerAction) userInfo:nil repeats:true];
+}
+
+- (void)timerAction {
+    NSLog(@"zzzzz");
 }
 
 - (void)updateContent{
@@ -73,6 +87,9 @@
 - (void)dealloc
 {
     NSLog(@"viewcontroller 释放");
+    
+    [_timer invalidate];
+    _timer = NULL;
 }
 
 @end

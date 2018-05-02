@@ -10,9 +10,16 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        UIView.animate(withDuration: 1) {
+            // 不用管内存方面
+        }
+        
+        
     }
 
     override func didReceiveMemoryWarning() {

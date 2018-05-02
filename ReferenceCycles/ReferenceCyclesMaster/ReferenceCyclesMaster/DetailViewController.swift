@@ -13,7 +13,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var msgLabel: UILabel!
     
     var p1: Person!
-    
+    var timer: Timer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,12 +51,51 @@ class DetailViewController: UIViewController {
         self.updateMsgContent()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        // 注意再初始化时销毁上一个计时器
+        self.destroyTimer()
+        
+//        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { (timer) in
+//            print("timer events")
+//
+//            // 这里需要注意
+//            self.timerLoopAction()
+//        })
+        
+        
+        timer = Timer.scheduledTimer(timeInterval: 1, target: WeakProxy.init(target: self), selector: #selector(DetailViewController.timerLoopAction), userInfo: nil, repeats: true)
+    }
+    
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        // 一种是在页面退出时一定要销毁计时器
+//        destroyTimer()
+    }
+    
     deinit {
         print("DetailViewController 销毁")
         p1 = nil
+        
+        //通常做法是这
+        destroyTimer()
     }
     
     // MARK: - Action Methods
+    func destroyTimer() {
+        if timer != nil {
+            timer?.invalidate()
+            timer = nil
+        }
+    }
+    
+    @objc func timerLoopAction() {
+        print("zzzzz")
+    }
+    
     func updateMsgContent() {
 //        let content = p1.closure()
         let content = "\(p1.name)-\(p1.age)"

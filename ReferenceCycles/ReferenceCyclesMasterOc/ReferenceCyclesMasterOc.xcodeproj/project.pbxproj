@@ -14,6 +14,7 @@
 		916EBEFA207C495D00ADF0DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 916EBEF8207C495D00ADF0DF /* LaunchScreen.storyboard */; };
 		916EBEFD207C495D00ADF0DF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 916EBEFC207C495D00ADF0DF /* main.m */; };
 		916EBF05207C499600ADF0DF /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 916EBF04207C499600ADF0DF /* Person.m */; };
+		9189D45F20997012000607DE /* WeakProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9189D45E20997012000607DE /* WeakProxy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		916EBEFC207C495D00ADF0DF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		916EBF03207C499600ADF0DF /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		916EBF04207C499600ADF0DF /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		9189D45D20997012000607DE /* WeakProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeakProxy.h; sourceTree = "<group>"; };
+		9189D45E20997012000607DE /* WeakProxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeakProxy.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +75,8 @@
 				916EBEF8207C495D00ADF0DF /* LaunchScreen.storyboard */,
 				916EBEFB207C495D00ADF0DF /* Info.plist */,
 				916EBEFC207C495D00ADF0DF /* main.m */,
+				9189D45D20997012000607DE /* WeakProxy.h */,
+				9189D45E20997012000607DE /* WeakProxy.m */,
 			);
 			path = ReferenceCyclesMasterOc;
 			sourceTree = "<group>";
@@ -146,6 +151,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9189D45F20997012000607DE /* WeakProxy.m in Sources */,
 				916EBEF2207C495C00ADF0DF /* ViewController.m in Sources */,
 				916EBEFD207C495D00ADF0DF /* main.m in Sources */,
 				916EBF05207C499600ADF0DF /* Person.m in Sources */,

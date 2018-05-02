@@ -16,6 +16,7 @@
 		916EBEDE207B58C000ADF0DF /* 循环应用.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 916EBEDD207B58C000ADF0DF /* 循环应用.rtf */; };
 		916EBEE0207B5B9700ADF0DF /* DelayTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916EBEDF207B5B9700ADF0DF /* DelayTask.swift */; };
 		916EBF09207C9DCB00ADF0DF /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 916EBF08207C9DCB00ADF0DF /* Person.m */; };
+		9189D46120997281000607DE /* WeakProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9189D46020997281000607DE /* WeakProxy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		916EBF06207C9DCA00ADF0DF /* ReferenceCyclesMaster-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ReferenceCyclesMaster-Bridging-Header.h"; sourceTree = "<group>"; };
 		916EBF07207C9DCB00ADF0DF /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		916EBF08207C9DCB00ADF0DF /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		9189D46020997281000607DE /* WeakProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakProxy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				916EBEC7207B53EA00ADF0DF /* AppDelegate.swift */,
 				916EBEC9207B53EA00ADF0DF /* ViewController.swift */,
 				916EBEDB207B552200ADF0DF /* DetailViewController.swift */,
+				9189D46020997281000607DE /* WeakProxy.swift */,
 				916EBF07207C9DCB00ADF0DF /* Person.h */,
 				916EBF08207C9DCB00ADF0DF /* Person.m */,
 				916EBECB207B53EA00ADF0DF /* Main.storyboard */,
@@ -153,6 +156,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9189D46120997281000607DE /* WeakProxy.swift in Sources */,
 				916EBEE0207B5B9700ADF0DF /* DelayTask.swift in Sources */,
 				916EBECA207B53EA00ADF0DF /* ViewController.swift in Sources */,
 				916EBF09207C9DCB00ADF0DF /* Person.m in Sources */,
